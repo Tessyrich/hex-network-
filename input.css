@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+#bars-container.transform-x .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-1px, 6px);
+}
+
+#bars-container.transform-x .bar:nth-child(2) {
+  transform: rotate(45deg) translate(1px, -6px);
+}
+
+.cont {
+  flex: 0 0 160%;
+  object-fit: contain;
+  object-position: center;
+
+  box-sizing: border-box;
+}
+.cont::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 50%;
+  height: 50%;
+  width: 0.0625rem;
+  background: linear-gradient(
+    180deg,
+    hsla(0, 0%, 100%, 0.07),
+    hsla(0, 4%, 5%, 0.4)
+  );
+}
+
+.cont img {
+  transform-origin: center center;
+  object-fit: cover;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+  max-width: 100%;
+}
+
+.section-hero[data-v-1c415362] {
+  background: linear-gradient(180deg, #000, transparent);
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.title {
+  background: linear-gradient(135deg, hsla(0, 0%, 100%, 0) 56%, #ffcaba 98%),
+    linear-gradient(25deg, #f5d1ff 23%, #fff 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
