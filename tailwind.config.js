@@ -9,7 +9,7 @@ module.exports = {
         degreen: "#a4f9ff",
       },
       fontSize: {
-        big: "8.5rem",
+        big: "9rem",
         bigger: "15rem",
       },
     },
