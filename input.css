@@ -19,7 +19,7 @@
 }
 
 .cont {
-  flex: 0 0 160%;
+  flex: 0 0 163%;
   object-fit: contain;
   object-position: center;
 
@@ -59,4 +59,30 @@
     linear-gradient(25deg, #f5d1ff 23%, #fff 60%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.link {
+  /* Use a cursor pointer */
+  cursor: pointer;
+  /* Use some padding */
+  padding: 0.5rem 1rem;
+}
+
+/* Style the active link */
+.link.active {
+  /* Use a white text color */
+  color: #ffffff;
+}
+
+/* Style the contents */
+.content {
+  /* Use a hidden display by default */
+  display: none;
+  padding: 1rem;
+}
+
+/* Style the active content */
+.content.active-content {
+  /* Use a block display */
+  display: block;
 }

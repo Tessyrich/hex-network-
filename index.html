@@ -11,7 +11,7 @@
     <title>Document</title>
   </head>
   <body class="bg-black">
-    <div class="w-full relative lg:mt-6 mt-0 top-0 left-0 flex">
+    <div class="w-full relative lg:mt-6 mt-0 top-0 left-0 flex flex-col z-[1]">
       <nav class="nav-container1 h-10 flex lg:hidden relative">
         <div class="show-on-mobile flex lg:hidden w-full h-full relative">
           <a
@@ -50,10 +50,85 @@
     <!-- Container that will be revealed -->
     <div
       id="menu-container"
-      class="hidden bg-white p-8 transition-transform transform origin-top-right"
+      class="hidden w-full bg-black p-4 transition-transform transform origin-top-right absolute z-[1]"
     >
       <!-- Your menu content goes here -->
-      <p>Your menu content goes here.</p>
+
+      <div class="mx-auto py-8">
+        <div
+          class="flex space-x-4 overflow-x-auto text-3xl text-gray-400 whitespace-nowrap"
+        >
+          <!-- Add more links as needed -->
+          <div
+            class="link active active:text-white font-bold"
+            data-content="content1"
+          >
+            Products
+          </div>
+          <div class="link active:text-white font-bold" data-content="content2">
+            Developers
+          </div>
+          <div class="link active:text-white font-bold" data-content="content3">
+            Resources
+          </div>
+          <div class="link active:text-white font-bold" data-content="content4">
+            Contact
+          </div>
+        </div>
+
+        <div class="mt-8 text-white">
+          <!-- Add more content sections as needed -->
+          <div id="content1" class="content active-content p-4">
+            <!-- Content for Link 1 -->
+            <div class="flex flex-col gap-4">
+              <p class="text-gray-500">INTERCHAIN STACK</p>
+              <a href="#" class="text-gray-300">Comos SDK</a>
+              <a href="#" class="text-gray-300">CometBFT</a>
+              <a href="#" class="text-gray-300">IBC Protocol</a>
+              <a href="#" class="text-gray-300">CosmWasm</a>
+              <div href="#" class="w-20 h-[1px] bg-gray-400"></div>
+              <p class="text-gray-500">SOLUTIONS</p>
+              <a href="#" class="text-gray-300">Interchain security</a>
+              <a href="#" class="text-gray-300">Neutron</a>
+            </div>
+          </div>
+
+          <div id="content2" class="content p-4">
+            <!-- Content for Link 2 -->
+            <div class="flex flex-col gap-4">
+              <p class="text-gray-500">LEARN</p>
+              <a href="#" class="text-gray-300">Tutorials</a>
+              <div href="#" class="w-20 h-[1px] bg-gray-400"></div>
+              <a href="#" class="text-gray-300">Explore Documentation</a>
+              <a href="#" class="text-gray-300">FAQ</a>
+              <a href="#" class="text-gray-300">Open Source Resources</a>
+
+              <a href="#" class="text-gray-300">Builder's Program</a>
+              <a href="#" class="text-gray-300">Developers Academy</a>
+            </div>
+          </div>
+
+          <div id="content3" class="content p-4">
+            <!-- Content for Link 3 -->
+            <div class="flex flex-col gap-4">
+              <p class="text-gray-500">INTERCHAIN TOOLS</p>
+              <a href="#" class="text-gray-300">Wallets</a>
+              <a href="#" class="text-gray-300">Block Explorers</a>
+              <a href="#" class="text-gray-300">Interchain Ecosystem</a>
+              <a href="#" class="text-gray-300">Token</a>
+              <div href="#" class="w-20 bg-gray-400"></div>
+              <p class="text-gray-500">COMMUNITY</p>
+              <a href="#" class="text-gray-300">Cosmos Hub Discord</a>
+              <a href="#" class="text-gray-300">Blog</a>
+              <a href="#" class="text-gray-300">Events</a>
+            </div>
+          </div>
+          <div id="content4" class="content p-4">
+            <!-- Content for Link 4 -->
+            <a href="#">Contact form</a>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- section hero -->
 
@@ -61,7 +136,7 @@
       data-v-1c415362=""
       data-v-98483598=""
       tag="section"
-      class="section-hero section-first flex flex-col items-center relative w-full z-[0]"
+      class="section-hero section-first flex flex-col items-center relative w-full z-0"
     >
       <div
         data-v-1c415362=""
@@ -88,13 +163,13 @@
       >
         <div
           data-v-91efa64a=""
-          class="cont relative w-full max-w-full min-w-[48rem] pb-[80%] lg:pb-[59%] h-0"
+          class="cont relative w-full max-w-full min-w-[100%] pb-[80%] lg:pb-[59%] h-0"
         >
           <!-- Image and Orbit svg -->
           <div
             data-v-91efa64a=""
             strength="15"
-            class="layer layer-back relative justify-center top-0 left-0 right-0 bottom-auto items-center w-full mt-[-24%] lg:mt-[-20%] flex"
+            class="layer layer-back relative justify-center top-0 left-0 right-0 bottom-auto items-center w-full mt-[-24%] lg:mt-[-20%] fl"
           >
             <img
               data-v-91efa64a=""
@@ -751,12 +826,12 @@
             <div
               data-v-91efa64a=""
               strength="60"
-              class="planet planet-bitcoin absolute lg:w-[6.8%] w-[10%] top-[40%] left-[72.3%]"
+              class="planet planet-bitcoin absolute lg:w-[6.8%] w-20 top-[40%] left-[72.3%]"
             >
               <div
                 data-v-91efa64a=""
                 data-original-title="null"
-                class="has-tooltip ]"
+                class="has-tooltip w-full]"
               >
                 <svg
                   data-v-91efa64a=""
@@ -765,6 +840,7 @@
                   viewBox="0 0 179 178"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  class="w-full"
                 >
                   <g data-v-91efa64a="" filter="url(#filter0_i-141938)">
                     <path
@@ -882,12 +958,12 @@
             <div
               data-v-91efa64a=""
               strength="60"
-              class="planet planet-ethereum absolute w-[7.2%] top-[26%] left-[21.4%]"
+              class="planet planet-ethereum absolute lg:w-[7.2%] w-20 top-[26%] left-[21.4%]"
             >
               <div
                 data-v-91efa64a=""
                 data-original-title="null"
-                class="has-tooltip"
+                class="has-tooltip w-full"
               >
                 <svg
                   data-v-91efa64a=""
@@ -896,6 +972,7 @@
                   viewBox="0 0 168 168"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  class="w-full"
                 >
                   <g data-v-91efa64a="" filter="url(#filter0_i-477343)">
                     <path
@@ -1024,12 +1101,12 @@
             <div
               data-v-91efa64a=""
               strength="70"
-              class="planet planet-cryptocom absolute w-[8.2%] top-[61.8%] left-[8.3%]"
+              class="planet planet-cryptocom absolute lg:w-[8.2%] w-20 top-[61.8%] left-[8.3%]"
             >
               <div
                 data-v-91efa64a=""
                 data-original-title="null"
-                class="has-tooltip"
+                class="has-tooltip w-full"
               >
                 <svg
                   data-v-91efa64a=""
@@ -1038,6 +1115,7 @@
                   viewBox="0 0 198 198"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  class="w-full"
                 >
                   <path
                     data-v-91efa64a=""
@@ -1215,7 +1293,7 @@
               <div
                 data-v-91efa64a=""
                 data-original-title="null"
-                class="has-tooltip"
+                class="has-tooltip w-full"
               >
                 <svg
                   data-v-91efa64a=""
@@ -1224,6 +1302,7 @@
                   viewBox="0 0 230 230"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  class="w-full"
                 >
                   <g data-v-91efa64a="" filter="url(#filter0_ii-287550)">
                     <path
@@ -1370,12 +1449,12 @@
             <div
               data-v-91efa64a=""
               strength="80"
-              class="planet planet-binance absolute w-[10%] top-[61%] left-[60%]"
+              class="planet planet-binance absolute lg:w-[10%] w-20 top-[61%] left-[60%]"
             >
               <div
                 data-v-91efa64a=""
                 data-original-title="null"
-                class="has-tooltip"
+                class="has-tooltip w-full"
               >
                 <svg
                   data-v-91efa64a=""
@@ -1384,6 +1463,7 @@
                   viewBox="0 0 225 225"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  class="w-full"
                 >
                   <g data-v-91efa64a="" filter="url(#filter0_i-567027)">
                     <path
@@ -1540,11 +1620,37 @@
         </div>
       </div>
     </div>
+
+    <div class="container mx-auto py-8 z-[1] bg-red">
+      <div class="flex space-x-4 overflow-x-auto">
+        <div class="link" onclick="showContent('content1')">Link 1</div>
+        <div class="link" onclick="showContent('content2')">Link 2</div>
+        <div class="link" onclick="showContent('content3')">Link 3</div>
+        <!-- Add more links as needed -->
+      </div>
+
+      <div class="mt-8">
+        <div id="content1" class="content active-content">
+          <!-- Content for Link 1 -->
+          <p>This is the content for Link 1.</p>
+        </div>
+
+        <div id="content2" class="content">
+          <!-- Content for Link 2 -->
+          <p>This is the content for Link 2.</p>
+        </div>
+
+        <div id="content3" class="content">
+          <!-- Content for Link 3 -->
+          <p>This is the content for Link 3.</p>
+        </div>
+        <!-- Add more content sections as needed -->
+      </div>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js"
       defer
     ></script>
-    <script></script>
 
     <script src="./script.js"></script>
   </body>

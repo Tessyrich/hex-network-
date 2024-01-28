@@ -544,6 +544,40 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 .fixed {
   position: fixed;
 }
@@ -628,12 +662,13 @@ video {
   z-index: 0;
 }
 
-.z-\[0\] {
-  z-index: 0;
-}
-
 .z-\[1\] {
   z-index: 1;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .ml-\[-3\%\] {
@@ -646,6 +681,10 @@ video {
 
 .mt-7 {
   margin-top: 1.75rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .mt-\[-24\%\] {
@@ -692,20 +731,20 @@ video {
   height: 100%;
 }
 
+.h-1 {
+  height: 0.25rem;
+}
+
+.h-\[1px\] {
+  height: 1px;
+}
+
+.w-20 {
+  width: 5rem;
+}
+
 .w-7 {
   width: 1.75rem;
-}
-
-.w-\[10\%\] {
-  width: 10%;
-}
-
-.w-\[7\.2\%\] {
-  width: 7.2%;
-}
-
-.w-\[8\.2\%\] {
-  width: 8.2%;
 }
 
 .w-\[9\.8\%\] {
@@ -716,8 +755,12 @@ video {
   width: 100%;
 }
 
-.min-w-\[48rem\] {
-  min-width: 48rem;
+.w-10 {
+  width: 2.5rem;
+}
+
+.min-w-\[100\%\] {
+  min-width: 100%;
 }
 
 .max-w-full {
@@ -756,6 +799,24 @@ video {
   gap: 1.25rem;
 }
 
+.gap-4 {
+  gap: 1rem;
+}
+
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -768,6 +829,11 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-gray-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-r {
@@ -797,6 +863,10 @@ video {
   padding: 2rem;
 }
 
+.p-4 {
+  padding: 1rem;
+}
+
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -817,6 +887,16 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .pb-\[31\%\] {
   padding-bottom: 31%;
 }
@@ -831,6 +911,11 @@ video {
 
 .text-center {
   text-align: center;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-6xl {
@@ -848,6 +933,11 @@ video {
   line-height: 1rem;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -856,9 +946,29 @@ video {
   letter-spacing: -0.05em;
 }
 
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
 .overline {
@@ -897,7 +1007,7 @@ video {
 }
 
 .cont {
-  flex: 0 0 160%;
+  flex: 0 0 163%;
   -o-object-fit: contain;
      object-fit: contain;
   -o-object-position: center;
@@ -942,9 +1052,43 @@ video {
   -webkit-text-fill-color: transparent;
 }
 
+.link {
+  /* Use a cursor pointer */
+  cursor: pointer;
+  /* Use some padding */
+  padding: 0.5rem 1rem;
+}
+
+/* Style the active link */
+
+.link.active {
+  /* Use a white text color */
+  color: #ffffff;
+}
+
+/* Style the contents */
+
+.content {
+  /* Use a hidden display by default */
+  display: none;
+  padding: 1rem;
+}
+
+/* Style the active content */
+
+.content.active-content {
+  /* Use a block display */
+  display: block;
+}
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.active\:text-white:active {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 @media (min-width: 1024px) {
@@ -964,8 +1108,20 @@ video {
     display: none;
   }
 
+  .lg\:w-\[10\%\] {
+    width: 10%;
+  }
+
   .lg\:w-\[6\.8\%\] {
     width: 6.8%;
+  }
+
+  .lg\:w-\[7\.2\%\] {
+    width: 7.2%;
+  }
+
+  .lg\:w-\[8\.2\%\] {
+    width: 8.2%;
   }
 
   .lg\:pb-\[59\%\] {
